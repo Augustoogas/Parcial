@@ -1,10 +1,22 @@
 package ar.com.unpaz.service;
 
-public class LeerArchivoServicio {
+import java.util.List;
 
-		private String paraMain="rama main de git";
+import ar.com.unpaz.crud.Functions;
+import ar.com.unpaz.model.Cliente;
+import ar.com.unpaz.repositorio.LeerArchivoRepositorio;
 
-		private String hola="Creando push para rama ";
+public class LeerArchivoServicio implements Functions {
+
+		public List<Cliente> leerArchivoClienteServicio(){
+			LeerArchivoRepositorio archivo= new LeerArchivoRepositorio();
+			
+			List<Cliente> clienteListaServicio = archivo.leerArchivoCliente();
+			
+			return clienteListaServicio;
+		}
+		
+		
 
 
 }
